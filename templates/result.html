@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cbt test app</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+    <style rel="stylesheet" type="text/css">
+        .flashes {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 30%;
+            background-color: cadetblue;
+            margin: 20px;
+        }
+        .timer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 30%;
+            background-color: lightgray;
+            margin: 20px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="mx-auto banner">
+    <h1 class="text-center mx-auto my-auto px-auto">CBT Test App</h1>
+</div>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li class="flashes mx-auto">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
+<div>
+    <h2 class="flashes mx-auto">Quiz Completed</h2>
+    <p class="flashes mx-auto">Your score: {{ score }}</p>
+    <p class="flashes mx-auto">High score: {{ high_score }}</p>
+    <p class="flashes mx-auto"><a href="{{ url_for('test') }}" class="btn btn-link text-white">Restart Quiz</a></p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

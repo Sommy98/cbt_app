@@ -1,0 +1,63 @@
+.banner{
+    background-image: url('../images/cbt_banner_2.jpg');
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    margin: 0 !important;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+
+.banner h1 {
+    color: white;
+    font-size: 50px;
+}
+
+.question_div{
+    width: auto;
+    height: auto;
+    margin: 50px;
+    background-color: burlywood;
+    padding:20px;
+    border:2px solid grey; 
+    border-radius: 8px;
+}
+
+.flashes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    background-color: cadetblue;
+    margin: 0 auto;
+    height: auto;
+    padding: 20px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 8px;
+    border: 2px solid grey;
+    margin-top: 40px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    height: 20px;
+    width: 20px;
+}
+
+label{
+    font-size: 20px;
+}
+
+.submit_btn{
+    width: 150px;
+    position: relative;
+    margin: 0 auto;
+}
